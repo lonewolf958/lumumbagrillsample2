@@ -249,13 +249,28 @@ margin: 0;
 box-shadow: var(--shadow-gold-glow);
 }
 
-.category-heading::before {
-content: "";
-position: absolute;
-inset: 3px;
-border: 1.5px dashed rgba(47, 8, 13, 0.3);
-border-radius: var(--radius-pill);
-pointer-events: none;
+
+/* ---------- Menu notice (single line above the menu) ---------- */
+.menu-notice-wrap {
+max-width: 900px;
+margin: 22px auto 0;
+padding: 0 18px;
+}
+
+.menu-notice {
+margin: 0;
+padding: 14px 18px;
+text-align: center;
+font-size: 15px;
+font-weight: 700;
+color: var(--gold-300);
+background: rgba(255, 184, 28, 0.10);
+border: 1.5px solid rgba(255, 184, 28, 0.35);
+border-radius: var(--radius-md);
+}
+
+@media (min-width: 1000px) {
+  .menu-notice-wrap { padding: 0; }
 }
 
 /* ---------- Category note ---------- */

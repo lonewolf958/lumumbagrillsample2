@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumumba Grill | Good Food</title>
+  <meta name="description" content="Welcome to Lumumba Grill. View our table menu and explore our delicious meals.">
+
+  <!-- Google Fonts: Playfair Display for headings, Poppins for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Restaurant Logo -->
+      <div class="brand-logo">
+        <img src="logo.jpeg" alt="Lumumba Grill Logo">
+      </div>
+
+      <!-- Restaurant Brand -->
+      <div class="brand-copy">
+        <h1 class="brand-name">Lumumba Grill</h1>
+        <p class="brand-tagline">Good Food</p>
+      </div>
+
+      <!-- Header Information -->
+      <div class="header-strip">
+
+        <div class="header-strip-item">
+          <span class="header-icon">📍</span>
+          <span>Lumumba &amp; Aggrey Street, Dar es Salaam</span>
+        </div>
+
+        <div class="header-strip-item">
+          <span class="header-icon">🕛</span>
+          <span>5PM - 12AM (Closed on Thursday)</span>
+        </div>
+
+        <div class="header-strip-item">
+          <span class="header-icon">📞</span>
+          <a href="tel:+255755666665">+255 755 666 665</a>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO / WELCOME SECTION ============ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">Lumumba Grill</p>
+          <h1 id="hero-heading">Welcome!</h1>
+          <p class="hero-tagline">Good Food.</p>
+          <p class="hero-copy">Enjoy delicious grilled meals, mandi, sizzlers and fresh seafood. Explore our menu and find your favourite.</p>
+          <a href="#choose" class="hero-scroll-cta">
+            <span>See our menu</span>
+            <span class="hero-scroll-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="hero-media">
+          <!-- Hero image: replace hero.png with the real photo when available -->
+          <div class="hero-image-frame">
+            <img
+              src="hero.png"
+              alt="A hot plate of freshly grilled food from Lumumba Grill"
+              class="hero-image"
+              onerror="this.closest('.hero-image-frame').classList.add('image-fallback')"
+            >
+            <div class="fallback-label" aria-hidden="true">
+              <span>Add hero.png</span>
+              <small>1000×1200px recommended</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAIN OPTION ============ -->
+    <section class="choose" id="choose" aria-labelledby="choose-heading">
+      <h2 id="choose-heading" class="section-heading">Ready to eat?</h2>
+
+      <div class="choice-grid">
+
+        <!-- Card: Table Menu -->
+        <a href="index1.html" class="choice-card choice-card--menu">
+          <span class="choice-icon" aria-hidden="true">📖</span>
+          <h3>Table Menu</h3>
+          <p>View our menu and explore our delicious meals.</p>
+          <span class="choice-button">View Table Menu</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ FEATURED FOOD SECTION ============ -->
+    <section class="featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading" class="section-heading">A Taste You'll Love</h2>
+
+      <div class="featured-track">
+        <figure class="food-card">
+          <div class="food-image-frame">
+            <img src="Mandi.jpeg" alt="Lumumba Mandi" loading="lazy" onerror="this.closest('.food-image-frame').classList.add('image-fallback')">
+            <div class="fallback-label" aria-hidden="true"><span>Mandi.jpeg</span></div>
+          </div>
+          <figcaption>Lumumba Mandi</figcaption>
+        </figure>
+
+        <figure class="food-card">
+          <div class="food-image-frame">
+            <img src="Barbecue.jpeg" alt="Barbecue" loading="lazy" onerror="this.closest('.food-image-frame').classList.add('image-fallback')">
+            <div class="fallback-label" aria-hidden="true"><span>Barbecue.jpeg</span></div>
+          </div>
+          <figcaption>Barbecue</figcaption>
+        </figure>
+
+        <figure class="food-card">
+          <div class="food-image-frame">
+            <img src="Sizzler.jpeg" alt="Sizzler" loading="lazy" onerror="this.closest('.food-image-frame').classList.add('image-fallback')">
+            <div class="fallback-label" aria-hidden="true"><span>Sizzler.jpeg</span></div>
+          </div>
+          <figcaption>Sizzler</figcaption>
+        </figure>
+
+        <figure class="food-card">
+          <div class="food-image-frame">
+            <img src="Burger.jpeg" alt="Lumumba Burger" loading="lazy" onerror="this.closest('.food-image-frame').classList.add('image-fallback')">
+            <div class="fallback-label" aria-hidden="true"><span>Burger.jpeg</span></div>
+          </div>
+          <figcaption>Lumumba Burger</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about" aria-labelledby="about-heading">
+      <div class="about-text">
+        <h2 id="about-heading" class="section-heading section-heading--left">About Lumumba Grill</h2>
+        <p>Welcome to Lumumba Grill, where great taste meets a warm and friendly experience. Explore our menu, discover your favourite meals and enjoy delicious food made for you.</p>
+      </div>
+    </section>
+
+    <!-- ============ VISIT SECTION ============ -->
+    <section class="about" aria-labelledby="visit-heading">
+      <h2 id="visit-heading" class="section-heading section-heading--left">Come and Visit Us.</h2>
+      <div class="about-inner">
+        <div class="about-image-frame">
+          <img src="Restaurant.jpeg" alt="Lumumba Grill" loading="lazy" onerror="this.closest('.about-image-frame').classList.add('image-fallback')">
+          <div class="fallback-label" aria-hidden="true"><span>Restaurant.jpeg</span></div>
+        </div>
+        <div class="about-text">
+          <p>
+            For orders and more information, contact us below or visit us at the restaurant.
+            <br>
+            📞 <a href="tel:+255755666665">+255 755 666 665</a>
+            <br>
+            📍 Lumumba &amp; Aggrey Street, Dar es Salaam.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <p class="footer-name">Lumumba Grill</p>
+        <p class="footer-tagline">Good Food</p>
+      </div>
+
+      <!-- Restaurant Details -->
+      <div class="footer-details">
+        <p class="footer-heading">Visit &amp; Order</p>
+        <p>Lumumba &amp; Aggrey Street, Dar es Salaam</p>
+        <p>📞 <a href="tel:+255755666665">+255 755 666 665</a></p>
+      </div>
+
+      <!-- Opening Hours -->
+      <div class="footer-hours">
+        <p class="footer-heading">Opening Hours</p>
+        <p>Open 5PM - 12AM</p>
+        <p>Closed on Thursday</p>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copyright">
+      © <span id="year"></span> Lumumba Grill. All rights reserved.
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Lumumba Grill — Home page
+   Brand palette inspired by the restaurant menu: deep burgundy, flame red,
+   grill gold, warm ivory and charcoal. Complete stylesheet. */
+:root {
+  --near-black: #171011;
+  --burgundy: #4A080D;
+  --burgundy-mid: #710D14;
+  --burgundy-deep: #260609;
+  --red: #C91F28;
+  --red-bright: #E3222B;
+  --gold-light: #FFD65A;
+  --gold: #FFB51B;
+  --cream: #F8F1E6;
+  --white-warm: #FFFCF5;
+  --logo-bg: #F0E8DC;
+  --ink: #211719;
+  --muted: #766568;
+  --shadow-soft: 0 18px 44px -20px rgba(23, 8, 9, .48);
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  margin: 0; color: var(--ink); background: var(--cream);
+  font-family: 'Poppins', sans-serif; line-height: 1.65;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button, input, textarea, select { font: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.site-header {
+  position: relative; z-index: 5; background: var(--logo-bg); color: var(--ink);
+  border-bottom: 4px solid var(--gold); box-shadow: 0 5px 22px rgba(23,8,9,.12);
+}
+.header-inner {
+  width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 15px 0;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.brand-logo { flex: 0 0 auto; width: 68px; height: 68px; border-radius: 12px; overflow: hidden; background: var(--white-warm); }
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; }
+.brand-copy { min-width: 150px; }
+.brand-name { margin: 0; color: var(--burgundy); font: 800 clamp(1.25rem, 2.5vw, 1.8rem)/1.15 'Playfair Display', Georgia, serif; letter-spacing: -.025em; }
+.brand-tagline { margin: 3px 0 0; color: var(--red); font-weight: 700; letter-spacing: .04em; }
+.header-strip { display: flex; flex: 1 1 100%; justify-content: flex-end; flex-wrap: wrap; gap: 8px 20px; padding-top: 10px; border-top: 1px solid rgba(113,13,20,.2); }
+.header-strip-item { display: flex; align-items: center; gap: 7px; color: #594448; font-size: .82rem; }
+.header-strip-item a { color: var(--burgundy); font-weight: 700; text-decoration: none; }
+.header-icon { color: var(--red); }
+.hero {
+  color: var(--white-warm); background:
+    radial-gradient(ellipse at 80% 15%, rgba(255,181,27,.16), transparent 38%),
+    linear-gradient(135deg, #210507 0%, var(--burgundy) 58%, #790F16 100%);
+  position: relative; isolation: isolate; overflow: hidden;
+}
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .16;
+  background: repeating-linear-gradient(135deg, rgba(255,214,90,.16) 0 1px, transparent 1px 28px); }
+.hero-inner { width: min(1180px, calc(100% - 40px)); margin: auto; padding: clamp(48px, 7vw, 92px) 0; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(30px, 5vw, 72px); }
+.hero-text { max-width: 620px; }
+.hero-kicker { margin: 0 0 12px; color: var(--gold-light); text-transform: uppercase; font-size: .9rem; font-weight: 700; letter-spacing: .14em; }
+.hero h1 { margin: 0; color: var(--white-warm); font: 800 clamp(2.8rem, 7vw, 5.6rem)/1.04 'Playfair Display', Georgia, serif; letter-spacing: -.04em; }
+.hero-tagline { margin: 12px 0; color: var(--gold); font: 700 clamp(1.25rem, 2.5vw, 1.8rem)/1.3 'Playfair Display', Georgia, serif; }
+.hero-copy { max-width: 550px; margin: 18px 0 26px; color: rgba(255,252,245,.85); font-size: 1.02rem; }
+.hero-scroll-cta { display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border: 1px solid rgba(255,214,90,.6); border-radius: 999px; color: var(--near-black); background: var(--gold); font-weight: 700; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+.hero-scroll-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+.hero-scroll-arrow { font-size: 1.25rem; }
+.hero-media { min-width: 0; }
+.hero-image-frame { position: relative; min-height: 300px; aspect-ratio: 4/4.4; max-height: 560px; border: 3px solid rgba(255,181,27,.72); border-radius: 24px; overflow: hidden; background: linear-gradient(135deg,#5b1519,#1b1010); box-shadow: 0 24px 55px rgba(0,0,0,.32); }
+.hero-image { width: 100%; height: 100%; min-height: 300px; position: absolute; inset: 0; object-fit: cover; }
+.image-fallback img { display: none; }
+.fallback-label { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; padding: 20px; color: var(--gold-light); text-align: center; font-weight: 700; background: radial-gradient(ellipse at center, #65131a, #210507); }
+.image-fallback .fallback-label { display: flex; }
+.fallback-label small { color: rgba(255,252,245,.72); font-size: .75rem; font-weight: 500; }
+.choose, .featured, .about { padding: clamp(48px, 6vw, 82px) 20px; }
+.choose { text-align: center; background: var(--white-warm); }
+.section-heading { margin: 0 0 30px; color: var(--burgundy); font: 800 clamp(1.8rem, 4vw, 2.8rem)/1.2 'Playfair Display', Georgia, serif; letter-spacing: -.025em; }
+.section-heading--left { text-align: left; }
+.choice-grid { display: grid; grid-template-columns: minmax(0, 440px); justify-content: center; gap: 20px; width: min(100%, 960px); margin: 0 auto; }
+.choice-card { display: flex; flex-direction: column; align-items: center; padding: 30px 24px; border: 1px solid rgba(74,8,13,.12); border-radius: var(--radius); background: var(--cream); color: var(--ink); box-shadow: 0 12px 30px -20px rgba(33,5,7,.5); text-decoration: none; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.choice-card:hover, .choice-card:focus-visible { transform: translateY(-4px); border-color: var(--gold); box-shadow: var(--shadow-soft); }
+.choice-icon { font-size: 2.4rem; }
+.choice-card h3 { margin: 10px 0 4px; color: var(--burgundy); font: 700 1.5rem 'Playfair Display', Georgia, serif; }
+.choice-card p { margin: 0 0 20px; color: var(--muted); }
+.choice-button { display: inline-block; padding: 11px 20px; border-radius: 999px; background: var(--red); color: white; font-weight: 700; box-shadow: 0 5px 12px rgba(201,31,40,.16); }
+.choice-button:hover { background: var(--gold); color: var(--near-black); }
+.featured { background: linear-gradient(180deg, var(--cream), #F2E5D4); }
+.featured .section-heading { text-align: center; }
+.featured-track { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; }
+.food-card { margin: 0; overflow: hidden; border-radius: 16px; background: var(--white-warm); box-shadow: 0 14px 30px -18px rgba(33,5,7,.55); }
+.food-image-frame { position: relative; height: 250px; overflow: hidden; background: linear-gradient(135deg,#5b1519,#211011); }
+.food-image-frame img, .about-image-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.food-card:hover img { transform: scale(1.04); }
+.food-card figcaption { padding: 14px 16px; color: var(--burgundy); font-weight: 700; }
+.about { background: var(--white-warm); }
+.about > .about-text, .about-inner { width: min(1050px, 100%); margin: 0 auto; }
+.about-text p { color: #5e4c4f; }
+.about-inner { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(24px,5vw,60px); }
+.about-image-frame { position: relative; min-height: 280px; height: clamp(280px, 35vw, 430px); border-radius: 20px; overflow: hidden; background: linear-gradient(135deg,#5b1519,#211011); box-shadow: 0 14px 30px -18px rgba(33,5,7,.55); }
+.site-footer { padding: 42px 20px 18px; color: rgba(255,252,245,.8); background: radial-gradient(ellipse at 50% 0%, rgba(201,31,40,.18), transparent 55%), var(--near-black); border-top: 4px solid var(--gold); }
+.footer-inner { width: min(1100px,100%); margin: auto; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; }
+.footer-name { margin: 0; color: var(--gold-light); font: 800 1.6rem 'Playfair Display', Georgia, serif; }
+.footer-tagline { margin: 0; color: rgba(255,252,245,.7); }
+.footer-heading { margin: 0 0 10px; color: var(--gold-light); font-weight: 700; }
+.footer-details p, .footer-hours p { margin: 5px 0; }
+.footer-details a { color: var(--gold-light); }
+.footer-copyright { margin: 28px auto 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.13); text-align: center; font-size: .8rem; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (max-width: 760px) {
+  .header-inner { width: min(100% - 28px, 1180px); gap: 12px; }
+  .brand-logo { width: 56px; height: 56px; }
+  .header-strip { justify-content: flex-start; gap: 8px 14px; }
+  .hero-inner { width: min(100% - 32px, 1180px); grid-template-columns: 1fr; padding: 48px 0; }
+  .hero-media { max-width: 520px; width: 100%; margin: 0 auto; }
+  .hero-image-frame { aspect-ratio: 5/4; }
+  .featured-track { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+  .food-image-frame { height: 190px; }
+  .about-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 420px) {
+  .header-strip-item { font-size: .75rem; }
+  .featured-track { gap: 10px; }
+  .food-image-frame { height: 150px; }
+  .food-card figcaption { padding: 11px; font-size: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}

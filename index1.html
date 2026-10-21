@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Lumumba Grill — Menu</title>
+
+  <meta
+    name="description"
+    content="Digital menu for Lumumba Grill, Lumumba &amp; Aggrey Street, Dar es Salaam. Good Food."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <!-- Restaurant Logo -->
+      <div class="brand-logo">
+        <img src="logo.jpeg" alt="Lumumba Grill Logo" />
+      </div>
+
+      <!-- Restaurant Name -->
+      <div class="brand-copy">
+        <h1 class="brand-name">Lumumba Grill</h1>
+        <p class="brand-tagline">Good Food</p>
+      </div>
+
+      <!-- Home Button -->
+      <a
+        href="index.html"
+        class="home-button"
+        aria-label="Go back to home page"
+      >
+        🏠 Home
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- =========================================================
+       CATEGORY NAVIGATION
+       ========================================================= -->
+
+  <nav class="category-nav" aria-label="Menu categories">
+    <div class="category-nav-scroll" id="category-nav" role="tablist"></div>
+  </nav>
+
+  <!-- =========================================================
+       MENU CONTENT
+       ========================================================= -->
+
+  <main id="menu-content" class="menu-content">
+    <!-- Category sections are rendered here by script1.js from MENU_DATA -->
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="site-footer">
+
+    <!-- Copyright -->
+    <p class="footer-copyright">
+      © <span id="year"></span>
+      Lumumba Grill.
+      All prices in Tanzanian Shillings.
+    </p>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script1.js"></script>
+
+</body>
+</html>

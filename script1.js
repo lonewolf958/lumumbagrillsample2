@@ -15,7 +15,6 @@ const MENU_DATA = [
     id: "starters",
     name: "Starters",
 
-    note: "Please allow 30 minutes for your food to be prepared.",
     items: [
       m("Prawn Cocktail", 14000),
       m("Chicken Wings Chinese Style", 8000),
